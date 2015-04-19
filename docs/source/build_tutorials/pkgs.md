@@ -4,8 +4,8 @@ Tutorial: Basic tutorial for building a Conda package
 
 Continuum's Conda toolset provides cross-platform binary package management.
 Originally created to distribute Python packages, conda is in active
-development and can now install packages in `R <https://binstar.org/r/r-plyr>`,
-`Javascript <https://binstar.org/wakari/nodejs>`, `Lua <https://binstar.org/alexbw/luajit>`, `Perl <https://binstar.org/dan_blanchard/perl>` and more.
+development and can now install packages in [R](https://binstar.org/r/r-plyr),
+[Javascript](https://binstar.org/wakari/nodejs), [Lua](https://binstar.org/alexbw/luajit), [Perl](https://binstar.org/dan_blanchard/perl) and more.
 This tutorial will teach you what goes into building conda packages. 
 
 Creating a conda package from a typical Python package built with `python setup.py install` is a one-line command. 
