@@ -14,20 +14,16 @@ in an ad-hoc way relative to one another, conda requires a bit more nudging. We'
 
 
 Install conda and conda-build
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=============================
 
-Conda is installed as part of `Continuum's Anaconda
-<https://store.continuum.io/cshop/anaconda/>`_ distribution. A lightweight
-standalone distribution called `Miniconda
-<http://conda.pydata.org/miniconda.html>`_ is also available, which is what
-this tutorial will assume. Upon downloading the installer script, make sure
-that this installer has appropriate permissions:
+If you do scientific computing, you've probably already installed Continuum Analytics' [Anaconda](https://store.continuum.io/cshop/anaconda/) distribution, which includes conda as its' package manager. If not, download [Miniconda](http://conda.pydata.org/miniconda.html). 
 
-On Linux and Mac OS X, run ``bash`` on the Miniconda installer, like
+On Linux, download miniconda from http://conda.pydata.org/miniconda.html
 
 .. code-block:: bash
 
-    $ bash Miniconda-3.5.2-Linux-x86_64.sh
+    $ chmod +x Miniconda-latest-Linux-x86_64.sh  # or Miniconda-latest-MacOSX-x86_64.sh
+    $ bash Miniconda-latest-Linux-x86_64.sh # or Miniconda-latest-MacOSX-x86_64.sh
 
 (you may need to replace the filename with the correct filename for the
 installer you downloaded)
