@@ -33,14 +33,11 @@ On Linux and OSX, download miniconda from http://conda.pydata.org/miniconda.html
 
 On Windows, open and run the .exe installer.
 
+You can hit Escape to go to the end of the license.
+The script asks where to install conda *select the default location* and whether or not to add the path to your environment *say yes*.
+
 You will not need administrative access to run Conda or manage Conda
 environments.
-
-
-Provide the script with your choices about where to install conda and whether
-or not the path will be added to your environment. This tutorial will assume
-it is added to the path; otherwise you will have to know the explicit path to
-your conda executable.
 
 Once Conda is installed, relaunch a terminal window and confirm that:
 
