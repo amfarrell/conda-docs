@@ -14,6 +14,7 @@ in an ad-hoc way relative to one another, conda requires a bit more nudging. We'
 
 ## Install conda and conda-build
 
+#### Make sure you have Anaconda or Miniconda
 
 If you do scientific computing, you've probably already installed Continuum Analytics' [Anaconda](https://store.continuum.io/cshop/anaconda/) distribution, which includes conda as its' package manager. If not, download [Miniconda](http://conda.pydata.org/miniconda.html). 
 
@@ -35,6 +36,7 @@ On Windows, open and run the .exe installer.
 You will not need administrative access to run Conda or manage Conda
 environments.
 
+
 Provide the script with your choices about where to install conda and whether
 or not the path will be added to your environment. This tutorial will assume
 it is added to the path; otherwise you will have to know the explicit path to
@@ -42,50 +44,33 @@ your conda executable.
 
 Once Conda is installed, relaunch a terminal window and confirm that:
 
-.. code-block:: bash
-
     $ conda info
 
-finds the executable where you have just installed it. If you did add Anaconda
+finds the executable where you have just installed it. <look up what the actual thing it should print out is> If you did add Anaconda
 or Miniconda to your PATH (the default option) you will have to supply its
 path explicitly.
 
 It's a useful habit to do:
 
-.. code-block:: bash
-
     $ conda update conda
 
 with a fresh install. 
 
-What you do need to install is ``conda-build``:
+#### Install conda-build
 
-.. code-block:: bash
+You now can install conda packages. To make them yourself, you need conda-build.
 
     $ conda install conda-build
 
 On Linux, you may also need to install ``patchelf``.
 
-.. code-block:: bash
-
     $ conda install patchelf
+    
+##  Conda packages come from Conda Recipes
+    
+    A conda package comes from a conda recipe, which is 
+    <Explain conda recipes>
 
-### Clone conda-recipes from GitHub
-
-
-The `conda recipes <https://github.com/conda/conda-recipes>`_ repo on GitHub
-has many example conda recipes. This is not a necessary step to build your own
-packages, but it's a very useful resource to investigate existing recipes for
-similar packages to the one you are trying to build. In many cases, a recipe
-for the package you are trying to build may already exist there. If you do not
-have git installed you will need to install it first.
-
-.. code-block:: bash
-
-    $ git clone https://github.com/conda/conda-recipes
-
-After getting familiar with full process of package building, feel free to add
-your own new recipes to this repository by making a pull request.
 
 ## Elementary Conda Package Building
 
@@ -148,6 +133,21 @@ with the ``--use-local`` flag.
 .. code-block:: bash
 
    $ conda install --use-local pyinstrument
+   
+### Clone conda recipe examples from GitHub
+
+The `conda recipes <https://github.com/conda/conda-recipes>`_ repo on GitHub
+has many example conda recipes. This is not a necessary step to build your own
+packages, but it's a very useful resource to investigate existing recipes for
+similar packages to the one you are trying to build. In many cases, a recipe
+for the package you are trying to build may already exist there. If you do not
+have git installed you will need to install it first.
+
+    $ git clone https://github.com/conda/conda-recipes
+
+After getting familiar with full process of package building, feel free to add
+your own new recipes to this repository by making a pull request.
+
 
 #### Writing the meta.yaml by hand
 
