@@ -3,24 +3,21 @@ Tutorial: Basic tutorial for building a Conda package
 =====================================================
 
 Continuum's Conda toolset provides cross-platform binary package management.
-Originally built to furnish Python distributions, the tools are in active
-development and being applied in many use cases. This tutorial explores what
-goes into building conda packages, particularly for a typical Python package
+Originally created to distribute Python packages, conda is in active
+development and can now install packages in `R <https://binstar.org/r/r-plyr>`,
+`Javascript <https://binstar.org/wakari/nodejs>`, `Lua <https://binstar.org/alexbw/luajit>`, `Perl <https://binstar.org/dan_blanchard/perl>` and more.
+This tutorial will teach you what goes into building conda packages, starting with a typical Python package
 built with
 
 .. code-block:: bash
 
     $ python setup.py install
 
-Conda packaging can be as simple as issuing a one-line command. Linked
-libraries are located relative to the binary (rather than referenced with
-absolute paths) and the software is bundled and ready to ship.
+Creating a conda package can be as simple as issuing a one-line command. 
 
-Other package builds are not trivial, especially if complex dependencies are
-involved or the package was built in an ad-hoc way that does not conform to
-the usual placement of files relative to one another. This tutorial will move
-through the gradations of difficulty to illustrate both the potential and
-challenges of using conda to package and distribute your software.
+Other times, when dependencies are more complex or the packages files were placed
+in an ad-hoc way relative to one another. We'll start with the easy cases and work through to the hard ones.
+
 
 Install conda and conda-build
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
