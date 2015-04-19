@@ -17,7 +17,7 @@ in an ad-hoc way relative to one another, conda requires a bit more nudging. We'
 
 If you do scientific computing, you've probably already installed Continuum Analytics' [Anaconda](https://store.continuum.io/cshop/anaconda/) distribution, which includes conda as its' package manager. If not, download [Miniconda](http://conda.pydata.org/miniconda.html). 
 
-#### Linux and OSX
+##### Linux and OSX
 
 On Linux and OSX, download miniconda from http://conda.pydata.org/miniconda.html
 
@@ -28,7 +28,7 @@ On Linux and OSX, download miniconda from http://conda.pydata.org/miniconda.html
 
 (use the filename for the installer you downloaded)
 
-#### Windows
+##### Windows
 
 On Windows, open and run the .exe installer.
 
