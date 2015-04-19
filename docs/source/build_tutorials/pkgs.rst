@@ -67,17 +67,7 @@ It's a useful habit to do:
 
     $ conda update conda
 
-with a fresh install. You can run the ``update`` command for any installed
-package, including conda itself. This intrinsic bootstrapping capacity makes
-conda very powerful. In fact, if you started with the Miniconda installation,
-you can expand it to the full [Anaconda
-distribution](https://store.continuum.io/cshop/anaconda/) with:
-
-.. code-block:: bash
-
-    $ conda install anaconda
-
-but that's not the focus here.
+with a fresh install. 
 
 What you do need to install is ``conda-build``:
 
