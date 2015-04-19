@@ -1,6 +1,5 @@
-=====================================================
-Tutorial: Basic tutorial for building a Conda package
-=====================================================
+
+# Tutorial: Basic tutorial for building a Conda package
 
 Continuum's Conda toolset provides cross-platform binary package management.
 Originally created to distribute Python packages, conda is in active
@@ -13,20 +12,23 @@ Other times, when dependencies are more complex or the packages files were place
 in an ad-hoc way relative to one another, conda requires a bit more nudging. We'll start with the easy cases and work through to the hard ones.
 
 
-Install conda and conda-build
-=============================
+## Install conda and conda-build
+
 
 If you do scientific computing, you've probably already installed Continuum Analytics' [Anaconda](https://store.continuum.io/cshop/anaconda/) distribution, which includes conda as its' package manager. If not, download [Miniconda](http://conda.pydata.org/miniconda.html). 
 
-On Linux, download miniconda from http://conda.pydata.org/miniconda.html
+#### Linux and OSX
+
+On Linux and OSX, download miniconda from http://conda.pydata.org/miniconda.html
 
 .. code-block:: bash
 
     $ chmod +x Miniconda-latest-Linux-x86_64.sh  # or Miniconda-latest-MacOSX-x86_64.sh
     $ bash Miniconda-latest-Linux-x86_64.sh # or Miniconda-latest-MacOSX-x86_64.sh
 
-(you may need to replace the filename with the correct filename for the
-installer you downloaded)
+(use the filename for the installer you downloaded)
+
+#### Windows
 
 On Windows, open and run the .exe installer.
 
@@ -68,8 +70,8 @@ On Linux, you may also need to install ``patchelf``.
 
     $ conda install patchelf
 
-Clone conda-recipes from GitHub
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Clone conda-recipes from GitHub
+
 
 The `conda recipes <https://github.com/conda/conda-recipes>`_ repo on GitHub
 has many example conda recipes. This is not a necessary step to build your own
@@ -85,11 +87,11 @@ have git installed you will need to install it first.
 After getting familiar with full process of package building, feel free to add
 your own new recipes to this repository by making a pull request.
 
-Elementary Conda Package Building
-=================================
+## Elementary Conda Package Building
 
-Using conda skeleton to build from a PyPI package
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#### Using conda skeleton to build from a PyPI package
+
 
 It is easy to build a skeleton recipe for any Python package that is hosted on
 `PyPI
@@ -147,8 +149,8 @@ with the ``--use-local`` flag.
 
    $ conda install --use-local pyinstrument
 
-Writing the meta.yaml by hand
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#### Writing the meta.yaml by hand
+
 
 Suppose you stick with the same package, ``pyinstrument``, but don't start
 from conda skeleton pypi. You can fill in the values in ``meta.yaml``
@@ -240,8 +242,8 @@ packages such as pyinstrument, there is generally no difference.
 There is more information about all the values that can go in the
 ``meta.yaml`` file on the :ref:`build` page.
 
-Uploading packages to `binstar.org <https://binstar.org>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#### Uploading packages to `binstar.org <https://binstar.org>`__
+
 
 All of above steps produce one object - the package (a tar.bz2
 archive). During package building process you were asked if the package should
@@ -290,8 +292,7 @@ your channel in addition to the default Continuum ones.
 
 (replace ``your_username`` with your Binstar username).
 
-Searching for already existing packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#### Searching for already existing packages
 
 You have two methods to accomplish this task. First option is to use ``conda
 search``. ``conda`` searches all the channels configured from the ``.condarc``
@@ -368,7 +369,7 @@ adds the channel just for that one command. For example, to install the
 For more information about this topic, see the `binstar.org documentation page
 <http://docs.binstar.org/>`_.
 
-Additional References
-^^^^^^^^^^^^^^^^^^^^^
+#### Additional References
+
 
 `Using PyPI packages for conda <http://www.peterbronez.com/Using%20PyPi%20Packages%20with%20Conda>`_
