@@ -22,8 +22,6 @@ If you do scientific computing, you've probably already installed Continuum Anal
 
 On Linux and OSX, download miniconda from http://conda.pydata.org/miniconda.html
 
-.. code-block:: bash
-
     $ chmod +x Miniconda-latest-Linux-x86_64.sh  # or Miniconda-latest-MacOSX-x86_64.sh
     $ bash Miniconda-latest-Linux-x86_64.sh # or Miniconda-latest-MacOSX-x86_64.sh
 
@@ -33,8 +31,8 @@ On Linux and OSX, download miniconda from http://conda.pydata.org/miniconda.html
 
 On Windows, open and run the .exe installer.
 
-You can hit Escape to go to the end of the license.
-The script asks where to install conda *select the default location* and whether or not to add the path to your environment *say yes*.
+You can hit q to go to the end of the license.
+The script asks where to install conda. **select the default location**. It asks whether or not to add the path to your environment. **say yes**.
 
 You will not need administrative access to run Conda or manage Conda
 environments.
@@ -43,7 +41,7 @@ Once Conda is installed, relaunch a terminal window and confirm that:
 
     $ conda info
 
-finds the executable where you have just installed it. <look up what the actual thing it should print out is> If you did add Anaconda
+finds the executable where you have just installed it.  If you did add Anaconda
 or Miniconda to your PATH (the default option) you will have to supply its
 path explicitly.
 
